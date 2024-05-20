@@ -28,7 +28,9 @@ ps aux
 # Docker Container
 ![Screenshot](./assets/docker-container-examples.png)
 
-# App.jar is a simple Java Jar of this file to log the process.
+### App.jar is a simple Java Jar of this file to log the process.
+// capture output stream to process-manegement app.
+
 ```java
 public class Driver {
     public static void main(String[] args) throws InterruptedException {
