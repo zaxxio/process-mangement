@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  process-management:
+    container_name: process-management
+    build:
+      context: .
+      dockerfile: src/main/docker/Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_ACTIVE_PROFILE=dev
+      - SWAGGER_ENABLED=true
+    networks:
+      - cloudNetwork
+
+networks:
+  cloudNetwork:
+    driver: bridge
