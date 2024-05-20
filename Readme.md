@@ -14,7 +14,7 @@ docker-compose down -v
 
 # Docker Exec 
 
-In theory there is no direct access not process memory and they have independent memory space. So, used a common filesystem memory store to communicate with each other. (IPC)
+In theory there is no direct access not process memory and they have independent memory space. So, used a common filesystem memory store to communicate with each other. (IPC) Pipestream would be better for optimum communication.
 
 Use in the container to check process
 ```shell
