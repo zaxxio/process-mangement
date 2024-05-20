@@ -34,7 +34,7 @@ public class Driver {
     public static void main(String[] args) throws InterruptedException {
         if (args.length >= 1) {
             while (true) {
-                System.out.println("Hello Core Devs Ltd. Process Id : " + args[0] + " Time : " + new Date());
+                System.out.println("Hello Core Devs Ltd. Process Id : " + args[0] + " Time : " + new Date()); // capture output stream to process-manegement app.
                 Thread.sleep(1000);
             }
         }
