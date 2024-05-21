@@ -23,7 +23,7 @@ ps aux
 ```
 
 # Screen Shot
-![Screenshot](./assets/swagger.png)
+![Screenshot](./assets/swagger-one.png)
 
 # Docker Container
 ![Screenshot](./assets/docker-container-examples.png)
