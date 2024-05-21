@@ -1,7 +1,6 @@
 package org.wsd.app.controller;
 
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -15,22 +14,10 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.*;
-import java.lang.reflect.Type;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.*;
 import java.util.concurrent.*;
-
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-import lombok.extern.log4j.Log4j2;
-import org.apache.commons.io.FileUtils;
-import org.springframework.stereotype.Component;
-
-import java.io.*;
-import java.lang.reflect.Type;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -48,7 +35,6 @@ class IPCService {
         if (processes.containsKey(process.getProcessId())) {
             throw new RuntimeException("Already running with id: " + process.getProcessId());
         }
-
         ProcessBuilder processBuilder = new ProcessBuilder("java", "-jar", "app.jar", process.getProcessId().toString());
         try {
             java.lang.Process p = processBuilder.start();
